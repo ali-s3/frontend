@@ -1,51 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Notifications page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      box-sizing: inherit;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    img {
+      margin-bottom: 0px;
+      border: 1px groove rgb(0,0,0,0.1);
+      border-radius: 40px;
+      height: 35px;
+    }
+
+    .inline-text-info {
+      /* border: 1px groove black; */
+      display: inline-block;
+      padding-top: 0px;
+      padding-left: 10px;
+    }
+
+    .notif-bar {
+      border-radius: 10px;
+      padding-top: 0px;
+      height: 70px;
+      margin-bottom: 5px;
+      padding-left: 15px;
+      /* border: 1px groove black; */
+      background-color: rgba(141, 177, 206, 0.2);
+    }
+
+    .what-happened {
+      /* border: 1px groove black; */
+      /* margin-top: -1px; */
+    }
+
+    .ago-time {
+      /* border: 1px groove black; */
+      margin-top: -10px;
+    }
+
+    .notification-bars {
+      padding: 15px;
+      margin-top: 5px;
+    }
   </style>
 </head>
+
 <body>
+  <div>
+    <span> Notifications 3</span>
 
-  Notifications 3
+    <span> Mark all as read </span>
+  </div>
+  <div class="notification-bars">
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" >Mark Webber reacted to your recent post My first
+          tournament today!</p>
+        <p class="ago-time"> 1m ago</p>
+      </div>
+    </div>
 
-  Mark all as read
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" > Angela Gray followed you</p>
+        <p class="ago-time"> 5m ago</p>
+      </div>
+    </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" > Jacob Thompson has joined your group Chess Club</p>
+        <p class="ago-time"> 1m ago</p>
+      </div>
+    </div>
 
-  Angela Gray followed you
-  5m ago
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" >Rizky Hasanuddin sent you a private message</p>
+        <p class="ago-time"> 1m ago</p>
+      </div>
+    </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" >Hello, thanks for setting up the Chess Club. I've
+          been a member for a few weeks now and
+          I'm already having lots of fun and improving my game.</p>
+        <p class="ago-time"> 1m ago</p>
+      </div>
+    </div>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" >Kimberly Smith commented on your picture</p>
+        <p class="ago-time"> 1m ago</p>
+      </div>
+    </div>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" >Nathan Peterson reacted to your recent post 5
+          end-game strategies to increase your win rate </p>
+        <p class="ago-time"> 1m ago</p>
+      </div>
+    </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+    <div class="notif-bar">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <div class="inline-text-info">
+        <p class="what-happened" >Anna Kim left the group Chess Club</p>
+        <p class="ago-time"> 1m ago</p>
+      </div>
+    </div>
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
 </body>
+
 </html>
