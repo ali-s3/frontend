@@ -9,26 +9,40 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Notifications page</title>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     * {
       box-sizing: inherit;
+      font-family: 'Roboto';
     }
 
     html {
+      background-color: rgba(1, 1, 1, 0.1);
       box-sizing: border-box;
     }
 
-    .attribution a {
+    /* Desktops and laptops ----------- */
+    @media only screen and (min-width : 1224px) {
+
+      /* Styles */
+      html {
+        padding: 20px 290px;
+      }
+    }
+
+    a {
       color: hsl(228, 45%, 44%);
     }
 
     img {
-      margin-bottom: 0px;
-      border: 1px groove rgb(0,0,0,0.1);
-      border-radius: 40px;
+      margin-top: 18px;
+      /* border: 1px groove rgb(0, 0, 0, 0.1); */
+      /* border-radius: 40px; */
       height: 35px;
+      /* margin: 0; */
+      /* padding: 100% 0; */
+      /* position: relative; */
     }
 
     .inline-text-info {
@@ -39,6 +53,7 @@
     }
 
     .notif-bar {
+      position: relative;
       border-radius: 10px;
       padding-top: 0px;
       /* height: 70px; */
@@ -47,11 +62,11 @@
       padding-left: 15px;
       /* border: 1px groove black; */
       background-color: rgba(141, 177, 206, 0.2);
+      display: flex;
     }
 
     .what-happened {
-      /* border: 1px groove black; */
-      /* margin-top: -1px; */
+      /* width: 90%; */
     }
 
     .ago-time {
@@ -60,56 +75,87 @@
     }
 
     .notification-bars {
-      padding: 15px;
+      padding: 10px;
       margin-top: 5px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .notif-bold-word {
+      font-size: 120%;
+    }
+
+    .notif-counter {
+      background-color: darkblue;
+      color: white;
+      border-radius: 5px;
+      width: 25px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .notif-header {
+      margin-bottom: 20px;
+    }
+
+    .mark-read {
+      float: right;
+    }
+    .attribution{
+      margin: 20px;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
-  <div>
-    <span> Notifications 3</span>
 
-    <span> Mark all as read </span>
-  </div>
   <div class="notification-bars">
+    <div class="notif-header">
+      <span><b class="notif-bold-word"> Notifications</b>
+        <span class="notif-counter"> 3</span></span>
+
+      <span class="mark-read"> Mark all as read </span>
+    </div>
     <div class="notif-bar">
       <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" >Mark Webber reacted to your recent post My first
+        <p class="what-happened">Mark Webber reacted to your recent post My first
           tournament today!</p>
         <p class="ago-time"> 1m ago</p>
       </div>
     </div>
 
     <div class="notif-bar">
-      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <img src="./assets/images/avatar-angela-gray.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" > Angela Gray followed you</p>
+        <p class="what-happened"> Angela Gray followed you</p>
         <p class="ago-time"> 5m ago</p>
       </div>
     </div>
 
     <div class="notif-bar">
-      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <img src="./assets/images/avatar-anna-kim.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" > Jacob Thompson has joined your group Chess Club</p>
+        <p class="what-happened"> Jacob Thompson has joined your group Chess Club</p>
         <p class="ago-time"> 1m ago</p>
       </div>
     </div>
 
     <div class="notif-bar">
-      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <img src="./assets/images/avatar-jacob-thompson.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" >Rizky Hasanuddin sent you a private message</p>
+        <p class="what-happened">Rizky Hasanuddin sent you a private message</p>
         <p class="ago-time"> 1m ago</p>
       </div>
     </div>
 
     <div class="notif-bar">
-      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <img src="./assets/images/avatar-kimberly-smith.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" >Hello, thanks for setting up the Chess Club. I've
+        <p class="what-happened">Hello, thanks for setting up the Chess Club. I've
+          been a member for a few weeks now and
+          I'm already having lots of fun and Hello, thanks for setting up the Chess Club. I've
           been a member for a few weeks now and
           I'm already having lots of fun and improving my game.</p>
         <p class="ago-time"> 1m ago</p>
@@ -119,31 +165,31 @@
     <div class="notif-bar">
       <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" >Kimberly Smith commented on your picture</p>
+        <p class="what-happened">Kimberly Smith commented on your picture</p>
         <p class="ago-time"> 1m ago</p>
       </div>
     </div>
 
     <div class="notif-bar">
-      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <img src="./assets/images/avatar-nathan-peterson.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" >Nathan Peterson reacted to your recent post 5
+        <p class="what-happened">Nathan Peterson reacted to your recent post 5
           end-game strategies to increase your win rate </p>
         <p class="ago-time"> 1m ago</p>
       </div>
     </div>
 
     <div class="notif-bar">
-      <img src="./assets/images/avatar-mark-webber.webp" alt="" srcset="">
+      <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="" srcset="">
       <div class="inline-text-info">
-        <p class="what-happened" >Anna Kim left the group Chess Club</p>
+        <p class="what-happened">Anna Kim left the group Chess Club</p>
         <p class="ago-time"> 1m ago</p>
       </div>
     </div>
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="ali.dev">Ali</a>.
     </div>
   </div>
 </body>
